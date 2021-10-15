@@ -20,14 +20,13 @@ jobs:
                 with:
                     path: node_modules/
                     key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-            -   name: Install NPM dependencies
+            -   name: Install dependencies
                 run: |
                     if [ ! -d node_modules ]; then
-                      npm ci
+                      yarn
                     fi
-                    npx patch-package
             -   name: Lint
-                run: npm run lint
+                run: yarn lint
             -   name: Cleanup
                 if: ${{ always() }}
                 run: |
@@ -49,11 +48,11 @@ jobs:
             -   name: Install Dependencies
                 run: |
                     if [ ! -d node_modules ]; then
-                      npm ci
+                      yarn
                     fi
                     npx patch-package
             -   name: Test
-                run: npm run test:cov
+                run: yarn test:cov
             -   name: Cleanup
                 if: ${{ always() }}
                 run: |
