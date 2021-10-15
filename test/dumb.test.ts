@@ -1,4 +1,4 @@
-import { DumbResource } from "@app/dumbResource"
+import { DumbResource } from "../src/dumbResource"
 
 describe(`dumb tests`, () => {
   it(`dumb test`, () => {
