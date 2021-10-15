@@ -18,7 +18,7 @@
         "lib": [
             "ES2021"
         ],
-        "module": "commonjs",
+        "module": "CommonJS",
         "noImplicitAny": true,
         "noImplicitReturns": true,
         "noUnusedLocals": true,
@@ -41,6 +41,7 @@
         "src",
         "test",
         ".eslintrc.js",
-        "index.ts"
+        "jest.config.js", 
+        "babel.config.js"
     ]
 }
