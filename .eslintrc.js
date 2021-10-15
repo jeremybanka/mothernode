@@ -4,14 +4,14 @@ module.exports = {
     `prettier`,
     `plugin:@typescript-eslint/recommended`,
   ],
-  plugins: [`prettier`, `jest`, `@typescript-eslint`, `import`],
+  plugins: [`prettier`, `import`, `jest`, `@typescript-eslint`],
   parser: `@typescript-eslint/parser`,
   parserOptions: {
     ecmaFeatures: { jsx: true },
     ecmaVersion: 2018,
     sourceType: `module`,
     project: [`./tsconfig.json`],
-    extraFileExtensions: [`.cjs`],
+    extraFileExtensions: [`.js`],
   },
   env: {
     node: true,
@@ -28,7 +28,6 @@ module.exports = {
   },
   rules: {
     "@typescript-eslint/explicit-member-accessibility": `error`,
-    "@typescript-eslint/explicit-function-return-type": `error`,
     "@typescript-eslint/method-signature-style": [`error`, `method`],
     "@typescript-eslint/prefer-for-of": `error`,
     "@typescript-eslint/prefer-enum-initializers": `error`,
@@ -38,6 +37,17 @@ module.exports = {
     "@typescript-eslint/type-annotation-spacing": `error`,
     "@typescript-eslint/unified-signatures": `error`,
     "@typescript-eslint/no-unused-vars": `off`,
+    // "import/extensions": [
+    //   `error`,
+    //   `ignorePackages`,
+    //   {
+    //     js: `never`,
+    //     jsx: `never`,
+    //     ts: `never`,
+    //     tsx: `never`,
+    //   },
+    // ],
+    "import/prefer-default-export": `off`,
     "prettier/prettier": `error`,
     "arrow-parens": [`error`, `as-needed`],
     "comma-dangle": [
@@ -54,17 +64,6 @@ module.exports = {
     "curly": [`error`, `multi-line`, `consistent`],
     "function-paren-newline": `off`,
     "implicit-arrow-linebreak": `off`,
-    "import/extensions": [
-      `error`,
-      `ignorePackages`,
-      {
-        js: `never`,
-        jsx: `never`,
-        ts: `never`,
-        tsx: `never`,
-      },
-    ],
-    "import/prefer-default-export": `off`,
     "jsx-quotes": [`error`, `prefer-double`],
     "keyword-spacing": [
       `error`,
