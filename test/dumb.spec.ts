@@ -1,9 +1,9 @@
-import { DumbResource } from "@app/dumb-resource";
+import { DumbResource } from "@app/dumbResource"
 
-describe("dumb tests", () => {
-    it("dumb test", () => {
-        const dumb = new DumbResource(1, 2);
-        const result = dumb.execute();
-        expect(result).to.be.equals(3);
-    });
-});
+describe(`dumb tests`, () => {
+  it(`dumb test`, () => {
+    const dumb = new DumbResource(1, 2)
+    const result = dumb.execute()
+    expect(result).toBeCloseTo(3)
+  })
+})

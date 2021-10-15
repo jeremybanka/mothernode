@@ -1,9 +1,10 @@
 ls:
-    .dir: kebab-case
-    .js: kebab-case
-    .json: kebab-case
-    .ts: kebab-case
-    .spec.ts: kebab-case
+    .dir: camelCase
+    .js: camelCase
+    .json: camelCase
+    .ts: camelCase
+    .tsx: camelCase
+    .spec.ts: camelCase
 
 ignore:
     - .git

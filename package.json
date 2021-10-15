@@ -1,11 +1,10 @@
 {
-    "name": "my-ts-app",
+    "name": "mothernode",
     "private": true,
     "scripts": {
         "start": "node dist/index.js",
-        "test": "mocha",
-        "test:watch": "npm run test -- --watch",
-        "test:cov": "nyc npm run test",
+        "test": "jest --watch --no-coverage",
+        "test:cov": "jest --watch",
         "prelint": "ls-lint",
         "lint": "eslint \"{src,test}/**/*.ts\"",
         "lint:fix": "npm run lint -- --fix",
@@ -16,21 +15,20 @@
     "devDependencies": {
         "@ls-lint/ls-lint": "^1.10.0",
         "@types/faker": "^5.5.8",
+        "@types/jest": "^27.0.2",
         "@types/node": "^16.10.1",
         "@typescript-eslint/eslint-plugin": "^5.0.0",
         "@typescript-eslint/parser": "^5.0.0",
         "eslint": "^8.0.0",
         "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-jest": "^25.2.1",
         "eslint-plugin-prettier": "^4.0.0",
         "faker": "^5.5.3",
-        "nyc": "^15.1.0",
+        "jest": "^27.2.5",
+        "prettier": "^2.4.1",
         "ts-node": "^10.2.1",
         "tsconfig-paths": "^3.11.0",
         "typescript": "~4.4.4"
-    },
-    "dependencies": {
-        "eslint-plugin-import": "^2.25.2",
-        "eslint-plugin-jest": "^25.2.1",
-        "prettier": "^2.4.1"
     }
 }
