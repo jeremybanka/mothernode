@@ -12,6 +12,8 @@ ignore:
     - .idea
     - .ls-lint.yml
     - .eslintrc.js
+    - .babel.config.js
+    - .jest.config.js
     - .nyc_output
     - .husky
     - node_modules
