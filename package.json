@@ -10,7 +10,7 @@
         "lint": "eslint \"{src,test}/**/*.ts{,x}\"",
         "lint:fix": "npm run lint -- --fix",
         "prebuild": "rm -rf dist",
-        "build": "tsc --project tsconfigBuild.json",
+        "build": "tsc --project tsconfig.build.json",
         "build:watch": "npm run build -- --watch"
     },
     "devDependencies": {
