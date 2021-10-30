@@ -1,10 +1,11 @@
 ls:
-    .dir: camelCase
-    .js: camelCase
+    .dir: camelCase | PascalCase
+    .js: camelCase | PascalCase
     .json: camelCase
-    .ts: camelCase
-    .tsx: camelCase
-    .test.ts: camelCase
+    .ts: camelCase | PascalCase
+    .tsx: PascalCase
+    .test.ts: camelCase | PascalCase
+    .test.tsx: PascalCase
     
 ignore:
     - .git
@@ -19,5 +20,5 @@ ignore:
     - node_modules
     - docker
     - dist
-    - "@types"
     - coverage
+    - tsconfig.build.json
