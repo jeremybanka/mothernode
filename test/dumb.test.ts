@@ -1,9 +1,9 @@
-import { DumbResource } from "../src/dumbResource"
+import { MyResource } from "../src/MyResource"
 
 describe(`dumb tests`, () => {
   it(`dumb test`, () => {
-    const dumb = new DumbResource(1, 2)
-    const result = dumb.execute()
+    const resource = new MyResource(1, 2)
+    const result = resource.execute()
     expect(result).toBeCloseTo(3)
   })
 })

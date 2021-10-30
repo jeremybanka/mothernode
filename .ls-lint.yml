@@ -6,6 +6,7 @@ ls:
     .tsx: PascalCase
     .test.ts: camelCase | PascalCase
     .test.tsx: PascalCase
+    .d.ts: kebab-case
     
 ignore:
     - .git

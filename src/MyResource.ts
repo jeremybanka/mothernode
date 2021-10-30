@@ -1,4 +1,4 @@
-export class DumbResource {
+export class MyResource {
   private readonly a: number
   private readonly b: number
 
