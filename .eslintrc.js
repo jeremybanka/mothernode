@@ -28,8 +28,6 @@ module.exports = {
   },
   rules: {
     "@typescript-eslint/explicit-member-accessibility": `error`,
-    "@typescript-eslint/method-signature-style": [`error`, `method`],
-    "@typescript-eslint/prefer-for-of": `error`,
     "@typescript-eslint/prefer-enum-initializers": `error`,
     "@typescript-eslint/prefer-literal-enum-member": `error`,
     "@typescript-eslint/prefer-optional-chain": `error`,
@@ -37,19 +35,10 @@ module.exports = {
     "@typescript-eslint/type-annotation-spacing": `error`,
     "@typescript-eslint/unified-signatures": `error`,
     "@typescript-eslint/no-unused-vars": `off`,
-    // "import/extensions": [
-    //   `error`,
-    //   `ignorePackages`,
-    //   {
-    //     js: `never`,
-    //     jsx: `never`,
-    //     ts: `never`,
-    //     tsx: `never`,
-    //   },
-    // ],
+    "import/extensions": [`error`, `never`],
     "import/prefer-default-export": `off`,
     "prettier/prettier": `error`,
-    "arrow-parens": [`error`, `as-needed`],
+    "arrow-parens": [`error`, `always`],
     "comma-dangle": [
       `error`,
       {
@@ -83,6 +72,14 @@ module.exports = {
       {
         code: 81,
         ignoreRegExpLiterals: true,
+      },
+    ],
+    "max-lines": [
+      `error`,
+      {
+        max: 270,
+        skipBlankLines: false,
+        skipComments: false,
       },
     ],
     "no-confusing-arrow": `off`,
@@ -134,7 +131,11 @@ module.exports = {
         consistent: true,
       },
     ],
-    "operator-linebreak": [`error`, `before`, { overrides: { "=": `after` } }],
+    "operator-linebreak": [
+      `error`,
+      `after`,
+      { overrides: { "?": `before`, ":": `before` } },
+    ],
     "prefer-destructuring": [
       `error`,
       {
@@ -154,6 +155,25 @@ module.exports = {
     "quotes": [`error`, `backtick`],
     "quote-props": [`error`, `consistent`, { unnecessary: false }],
     "semi": [`error`, `never`],
-    "semi-style": [`error`, `first`],
+    "semi-style": [`error`, `last`],
+    "import/order": [
+      `error`,
+      {
+        "groups": [`builtin`, `external`, `internal`],
+        "pathGroups": [
+          {
+            pattern: `react`,
+            group: `external`,
+            position: `before`,
+          },
+        ],
+        "pathGroupsExcludedImportTypes": [`react`],
+        "newlines-between": `always`,
+        "alphabetize": {
+          order: `asc`,
+          caseInsensitive: true,
+        },
+      },
+    ],
   },
 }
