@@ -898,6 +898,11 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@banka/eslint-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@banka/eslint-config/-/eslint-config-1.0.0.tgz#0da700d91380d161ff66039cf85347b2e795539f"
+  integrity sha512-VO+Ffbko2ZwFdBVNVBGIXu5rMMzdhXwvb0RGAN/B70O0Iambaip30aJz1a3AupFirofOSJAc5nygXI0+V/9hLw==
+
 "@bcoe/v8-coverage@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
