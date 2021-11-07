@@ -8,10 +8,10 @@
     "test:once": "jest",
     "prelint": "ls-lint",
     "lint": "eslint \"{src,test}/**/*.ts{,x}\"",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "yarn lint -- --fix",
     "prebuild": "rm -rf dist",
     "build": "tsc --project tsconfig.build.json",
-    "build:watch": "npm run build -- --watch"
+    "build:watch": "yarn build -- --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
