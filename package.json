@@ -1,29 +1,33 @@
 {
   "name": "mothernode",
   "private": true,
+  "version": "0.0.0",
+  "description": "...",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
   "scripts": {
-    "start": "node dist/index.js",
     "test": "jest --watch --no-coverage",
     "test:cov": "jest --watch",
     "test:once": "jest",
     "prelint": "ls-lint",
     "lint": "eslint \"{src,test}/**/*.ts{,x}\"",
-    "lint:fix": "yarn lint -- --fix",
+    "lint!": "yarn lint -- --fix",
     "prebuild": "rm -rf dist",
-    "build": "tsc --project tsconfig.build.json",
-    "build:watch": "yarn build -- --watch"
+    "build": "node esbuild.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/plugin-transform-typescript": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
     "@banka/eslint-config": "^1.0.0",
+    "@faker-js/faker": "^7.3.0",
     "@ls-lint/ls-lint": "^1.10.0",
     "@types/faker": "^5.5.8",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.10.1",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "esbuild": "^0.14.49",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
@@ -36,7 +40,7 @@
     "prettier": "^2.4.1",
     "ts-node": "^10.2.1",
     "tsconfig-paths": "^3.11.0",
-    "typescript": "~4.4.4"
+    "typescript": "~4.7.4"
   },
   "lint-staged": {
     "*.ts{,x}": "yarn lint"
