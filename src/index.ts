@@ -1,1 +1,1 @@
-// My entrypoint here
+export const TWO = 2
